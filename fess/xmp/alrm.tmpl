@@ -1,0 +1,27 @@
+{{define "alrm"}}
+<!DOCTYPE html>
+<html><head>
+	<title>Calls!</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css"/>
+	<script type="text/javascript" src="css/stat.js"></script>
+	<meta charset="UTF-8">
+	<script>
+	window.onkeypress = function(e) {
+    if ((e.which || e.keyCode) == 13) {
+        f0.submit();
+    }
+}
+</script>
+	</head>
+	<body>
+	<form id=f0 action="/fess/form" method="post"></form>
+	<div class="alrm">Запит поверне {{.}} записів</div>
+    <div class="boot">
+    <ul class="tab">
+    <li><a href="/fess" class="tablinks">5ESS</a></li>
+    <li><a href="/si2k" class="tablinks">SI2K</a></li>
+    <li><a href="/es11" class="tablinks">ES11</a></li>
+    </ul>
+    </div>
+</body></html>
+{{end}}

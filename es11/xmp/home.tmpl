@@ -1,0 +1,35 @@
+{{define "home"}}
+<!DOCTYPE html>
+<html><head>
+    <title>ES11:calls</title>
+    <link rel="stylesheet" type="text/css" href="es11/css/es11.css"/>
+    <script type="text/javascript" src="es11/css/stat.js"></script>
+    <meta charset="UTF-8">
+    <script>
+    window.onkeypress = function(e) {
+    if ((e.which || e.keyCode) == 13) {
+        f0.submit();
+    }
+}
+</script>
+    </head>
+    <body>
+    <form id=f0 action="/es11/form" method="post"></form>
+    <div class="dash0"><table><tr><td>ES11 кількість записів: {{.All}}</td></tr></table></div>
+    <div class="dash1"><table>
+    {{range .Rec}}
+    <tr><td class="dt">{{.Date}}</td>
+    <td class="{{.Vi}}">{{.I0}}</td><td class="{{.Vi}}">{{.Pi}}</td>
+    <!--td class="{{.Va}}">{{.A0}}</td><td class="{{.Va}}">{{.Pa}}</td-->
+    </tr>
+    {{end}}
+    </table></div>
+    <div class="boot">
+    <ul class="tab">
+    <li><a href="/fess" class="tablinks">5ESS</a></li>
+    <li><a href="/si2k" class="tablinks">SI2K</a></li>
+    <li><a href="/es11" class="tablinks">ES11</a></li>
+    </ul>
+    </div>
+</body></html>
+{{end}}

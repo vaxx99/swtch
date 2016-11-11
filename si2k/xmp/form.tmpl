@@ -1,0 +1,38 @@
+{{define "form"}}
+<!DOCTYPE html>
+<html><head>
+    <title>SI2K:form</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css"/>
+  	<script type="text/javascript" src="css/stat.js"></script>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+    <form id="f0" action="/si2k/call" method="post"></form>
+    <div class="col"><span id="left">Кількість записів: {{.}}</span></div>
+    <div class="col0"><span id="center">SI2K</span></div>
+    <div class="col2"></div>
+   <div class=top>
+    <table id="tbl">
+       <th id="id">№</th>
+       <th id="sw"><input form="f0" id=ws type="text" name="sw" placeholder="Ст."/></th>
+       <th id="hi"><input form="f0" id=ih type="text" name="hi" placeholder="Кат. А"/></th>
+       <th id="na"><input form="f0" id=an type="text" name="na" placeholder="Номер А"/></th>
+       <th id="nb"><input form="f0" id=bn type="text" name="nb" placeholder="Номер Б"/></th>
+       <th id="ds"><input form="f0" id=sd type="text" name="ds" placeholder="Дата початку"/></th>
+       <th id="de"><input form="f0" id=ed type="text" name="de" placeholder="Дата кінця"/></th>
+       <th id="dr"><input form="f0" id=rd type="text" name="dr" placeholder="Напр."/></th>
+       <th id="it"><input form="f0" id=ti type="text" name="it" placeholder="Вх.ТГ"/></th>
+       <th id="ot"><input form="f0" id=to type="text" name="ot" placeholder="Вих.ТГ"/></th>
+       <th id="du" style="border-right:0;"><input form="f0" id=ud type="text" name="du" placeholder="Сек."/></th>
+   </table>
+  </div>
+ </div>
+    <div class="boot">
+    <ul class="tab">
+    <li><a href="/fess" class="tablinks">5ESS</a></li>
+    <li><a href="/si2k" class="tablinks">SI2K</a></li>
+    <li><a href="/es11" class="tablinks">ES11</a></li>
+    </ul>
+    </div>
+</body></html>
+{{end}}
