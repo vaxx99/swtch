@@ -13,7 +13,7 @@ import (
 
 	"github.com/boltdb/bolt"
 	"github.com/vaxx99/swtch/conf"
-	"github.com/vaxx99/zload/ama"
+	"github.com/vaxx99/fload/ama"
 )
 
 type hrec struct {
